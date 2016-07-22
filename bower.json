@@ -1,0 +1,28 @@
+{
+  "name": "databind-tracker",
+  "homepage": "https://github.com/fernandezpaco/databind-tracker",
+  "authors": [
+    "e022333 <ffernandez@bbva.com>"
+  ],
+  "version": "1.0.0",
+  "description": "It tracks data binding events and populates a timestamped list with this events",
+  "main": "databind-tracker.html",
+  "keywords": [
+    "web-components"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "webcomponentsjs": "^0.7.22"    
+  },  
+   "devDependencies": {
+    "video-camera": "^1.0.1"    
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,38 @@
+<link rel="import" href="../polymer/polymer.html">
+
+
+<dom-module id="databind-tracker">
+<template>
+</template>
+<script>
+Polymer({
+    is: "databind-tracker",
+    properties: {
+        p0: {
+            type: String,
+            observer: '_pChanged'
+        },
+        p1: {
+            type: String,
+            observer: '_pChanged'
+        },
+        p2: {
+            type: String,
+            observer: '_pChanged'
+        },
+        p3: {
+            type: String,
+            observer: '_pChanged'
+        },
+        data: {
+            type: Object,
+            value: []
+        }
+    },
+    _pChanged: function(){
+        var record = [Date.now(),this.p0,this.p1,this.p2,this.p3];
+        this.data.push(record);
+    }
+});
+</script>
+</dom-module>
