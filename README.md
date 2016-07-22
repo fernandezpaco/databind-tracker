@@ -12,6 +12,7 @@ In the following example every time that you click on the video, an screenshot w
 timestamp 		p0
 
 1469190369888	data:image/png;base64,iVBOR....
+
 1469190435503	data:image/png;base64,1fji3....
 
 ```html
