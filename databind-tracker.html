@@ -1,8 +1,16 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-list/iron-list.html">
 
 
 <dom-module id="databind-tracker">
 <template>
+ <iron-list items="[[items]]" as="item">
+    <template>
+      <div>
+        Date: [[item.date]] [[item.p0]] [[item.p1]] [[item.p2]] [[item.p3]]
+      </div>
+    </template>
+  </iron-list>
 </template>
 <script>
 Polymer({
@@ -24,15 +32,24 @@ Polymer({
             type: String,
             observer: '_pChanged'
         },
-        data: {
-            type: Object,
-            value: []
+        items: {
+            type: Array,
+            value: [],
+            notify: true
         }
     },
+   /*observers: [
+        'dummy(items.*)'
+    ],*/
     _pChanged: function(){
-        var record = [Date.now(),this.p0,this.p1,this.p2,this.p3];
-        this.data.push(record);
-    }
+        var record = {date: Date.now(),p0:this.p0,p1:this.p1,p2:this.p2,p3:this.p3};
+        this.unshift('items',record);
+        //this.fire('data2-changed',this.data);
+    }/*,
+    dummy: function(val){
+        this.fire('data2-changed',this.items);
+        console.log(this.items);
+    }*/
 });
 </script>
 </dom-module>
