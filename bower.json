@@ -4,7 +4,7 @@
   "authors": [
     "e022333 <ffernandez@bbva.com>"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "It tracks data binding events and populates a timestamped list with this events",
   "main": "databind-tracker.html",
   "keywords": [
